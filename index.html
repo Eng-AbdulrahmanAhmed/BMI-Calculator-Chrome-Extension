@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>BMI Calculator</h1>
+            <p>Calculate your Body Mass Index quickly and easily</p>
+        </header>
+
+        <div class="unit-toggle">
+            <button class="unit active" >Metric</button>
+            <button class="unit" >Imperial</button>
+        </div>
+
+        <div class="card">
+            <div class="input-group">
+                <label id="weight-label" for="weight">Weight (kg)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="weight" placeholder="Enter weight">
+                    <span class="hint weight-hint">kg</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label id="height-label" for="height">Height (cm)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="height" placeholder="Enter height">
+                    <span class="hint height-hint">cm</span>
+                </div>
+            </div>
+
+            <button id="calculate" >Calculate BMI</button>
+
+            <div id="error-msg" style="display: none; color: #e74c3c; margin-top: 15px; text-align: center; font-weight: 500; font-size: 14px;"></div>
+
+            <div id="result" class="result-container" style="display: none;">
+                <div class="bmi-value-label">BMI: <span id="bmi-val">-</span></div>
+                <div class="bmi-category" id="bmi-cat">-</div>
+                <div class="bmi-gauge">
+                    <div class="bmi-bar">
+                        <div class="bmi-pointer" id="bmi-pointer"></div>
+                    </div>
+                    <div class="bmi-labels">
+                        <span class="lbl-under">Underweight</span>
+                        <span class="lbl-normal">Normal</span>
+                        <span class="lbl-over">Overweight</span>
+                        <span class="lbl-obese">Obese</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
